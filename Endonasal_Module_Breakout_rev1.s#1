@@ -608,6 +608,34 @@ Trevor Bruns- May 2018</description>
 <wire x1="58.166" y1="4.1656" x2="58.166" y2="-4.1656" width="0.127" layer="21"/>
 <wire x1="58.166" y1="-4.1656" x2="50.292" y2="-4.1656" width="0.127" layer="21"/>
 </package>
+<package name="PAD.02X.02">
+<smd name="P$1" x="0" y="0" dx="0.508" dy="0.508" layer="1"/>
+</package>
+<package name="PAD.03X.03">
+<smd name="P$1" x="0" y="0" dx="0.762" dy="0.762" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="PAD.03X.05">
+<smd name="P$1" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="PAD.03X.04">
+<smd name="P$1" x="0" y="0" dx="1.016" dy="1.016" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="TP_15TH">
+<pad name="P$1" x="0" y="0" drill="0.381" diameter="0.6096" stop="no"/>
+<circle x="0" y="0" radius="0.381" width="0" layer="30"/>
+</package>
+<package name="TEST-POINT_5021">
+<description>&lt;b&gt;Keystone Electronics 5021 Test Point&lt;/b&gt; 
+&lt;p&gt; &lt;a href="https://www.digikey.com/product-detail/en/keystone-electronics/5021/36-5021-ND/2170334f"&gt;Digikey&lt;/a&gt;</description>
+<pad name="P$1" x="0" y="0" drill="1.016"/>
+<text x="-2.54" y="1.27" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<wire x1="1.016" y1="0.635" x2="1.27" y2="0.381" width="0.1016" layer="21" curve="-90"/>
+<wire x1="1.27" y1="0.381" x2="1.27" y2="-0.381" width="0.1016" layer="21"/>
+<wire x1="1.27" y1="-0.381" x2="1.016" y2="-0.635" width="0.1016" layer="21" curve="-90"/>
+<wire x1="-1.016" y1="-0.635" x2="-1.27" y2="-0.381" width="0.1016" layer="21" curve="-90"/>
+<wire x1="-1.27" y1="-0.381" x2="-1.27" y2="0.381" width="0.1016" layer="21"/>
+<wire x1="-1.27" y1="0.381" x2="-1.016" y2="0.635" width="0.1016" layer="21" curve="-90"/>
+</package>
 </packages>
 <symbols>
 <symbol name="M20">
@@ -1339,6 +1367,13 @@ Trevor Bruns- May 2018</description>
 <pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="2" x="0" y="-2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
 </symbol>
+<symbol name="TEST-POINT">
+<wire x1="2.54" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.302" y1="0.762" x2="3.302" y2="-0.762" width="0.1524" layer="94" curve="180"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;Name</text>
+<text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;Value</text>
+<pin name="1" x="0" y="0" visible="off" length="point" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="CONN_RECT_2X10">
@@ -1712,6 +1747,62 @@ Trevor Bruns- May 2018</description>
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TEST-POINT" prefix="TP">
+<description>Bare copper test points for troubleshooting or ICT</description>
+<gates>
+<gate name="G$1" symbol="TEST-POINT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="2" package="PAD.02X.02">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3" package="PAD.03X.03">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3X5" package="PAD.03X.05">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3X4" package="PAD.03X.04">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TP_15TH_THRU" package="TP_15TH">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_5021" package="TEST-POINT_5021">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -2240,6 +2331,17 @@ Source: RS Component / Phycomp</description>
 <part name="R17" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV"/>
 <part name="R18" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV"/>
 <part name="R19" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV"/>
+<part name="TP1" library="Cannula_1_0" deviceset="TEST-POINT" device="3X5"/>
+<part name="TP2" library="Cannula_1_0" deviceset="TEST-POINT" device="3X5"/>
+<part name="TP3" library="Cannula_1_0" deviceset="TEST-POINT" device="3X5"/>
+<part name="TP4" library="Cannula_1_0" deviceset="TEST-POINT" device="3X5"/>
+<part name="3.3V_IN" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
+<part name="3.3V_IN_GND" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
+<part name="3.3V" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
+<part name="M0_VHALL_IN" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
+<part name="M0_VHALL_IN_GND" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
+<part name="M0_VHALL" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
+<part name="M0_VHALL_GND" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
 </parts>
 <sheets>
 <sheet>
@@ -2379,10 +2481,21 @@ between resistor/cap)</text>
 <instance part="R18" gate="B" x="55.88" y="-25.4"/>
 <instance part="R18" gate="C" x="55.88" y="-30.48"/>
 <instance part="R18" gate="D" x="106.68" y="81.28" rot="R90"/>
-<instance part="R19" gate="A" x="55.88" y="-40.64"/>
-<instance part="R19" gate="B" x="55.88" y="-45.72"/>
+<instance part="R19" gate="A" x="55.88" y="-45.72"/>
+<instance part="R19" gate="B" x="55.88" y="-40.64"/>
 <instance part="R19" gate="C" x="55.88" y="-50.8"/>
 <instance part="R19" gate="D" x="111.76" y="81.28" rot="R90"/>
+<instance part="TP1" gate="G$1" x="30.48" y="-109.22" smashed="yes" rot="R180"/>
+<instance part="TP2" gate="G$1" x="30.48" y="-111.76" smashed="yes" rot="R180"/>
+<instance part="TP3" gate="G$1" x="30.48" y="-114.3" smashed="yes" rot="R180"/>
+<instance part="TP4" gate="G$1" x="30.48" y="-116.84" smashed="yes" rot="R180"/>
+<instance part="3.3V_IN" gate="G$1" x="30.48" y="-121.92" smashed="yes" rot="R180"/>
+<instance part="3.3V_IN_GND" gate="G$1" x="30.48" y="-124.46" smashed="yes" rot="R180"/>
+<instance part="3.3V" gate="G$1" x="30.48" y="-127" smashed="yes" rot="R180"/>
+<instance part="M0_VHALL_IN" gate="G$1" x="30.48" y="-137.16" smashed="yes" rot="R180"/>
+<instance part="M0_VHALL_IN_GND" gate="G$1" x="30.48" y="-139.7" smashed="yes" rot="R180"/>
+<instance part="M0_VHALL" gate="G$1" x="30.48" y="-144.78" smashed="yes" rot="R180"/>
+<instance part="M0_VHALL_GND" gate="G$1" x="30.48" y="-147.32" smashed="yes" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -2541,6 +2654,41 @@ between resistor/cap)</text>
 <pinref part="GND15" gate="G$1" pin="GND"/>
 <wire x1="-27.94" y1="-154.94" x2="-27.94" y2="-157.48" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="TP1" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="-109.22" x2="33.02" y2="-109.22" width="0.1524" layer="91"/>
+<label x="33.02" y="-109.22" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TP2" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="-111.76" x2="33.02" y2="-111.76" width="0.1524" layer="91"/>
+<label x="33.02" y="-111.76" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TP3" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="-114.3" x2="33.02" y2="-114.3" width="0.1524" layer="91"/>
+<label x="33.02" y="-114.3" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TP4" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="-116.84" x2="33.02" y2="-116.84" width="0.1524" layer="91"/>
+<label x="33.02" y="-116.84" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="3.3V_IN_GND" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="-124.46" x2="33.02" y2="-124.46" width="0.1524" layer="91"/>
+<label x="33.02" y="-124.46" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="M0_VHALL_IN_GND" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="-139.7" x2="33.02" y2="-139.7" width="0.1524" layer="91"/>
+<label x="33.02" y="-139.7" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="M0_VHALL_GND" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="-147.32" x2="33.02" y2="-147.32" width="0.1524" layer="91"/>
+<label x="33.02" y="-147.32" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="3.3V" class="0">
 <segment>
@@ -2599,6 +2747,11 @@ between resistor/cap)</text>
 <label x="-25.146" y="-144.78" size="1.778" layer="95"/>
 <wire x1="-25.4" y1="-144.78" x2="-27.94" y2="-144.78" width="0.1524" layer="91"/>
 <junction x="-27.94" y="-144.78"/>
+</segment>
+<segment>
+<pinref part="3.3V" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="-127" x2="33.02" y2="-127" width="0.1524" layer="91"/>
+<label x="33.02" y="-127" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="M0C" class="0">
@@ -3070,6 +3223,11 @@ between resistor/cap)</text>
 <wire x1="-4.064" y1="-132.588" x2="-4.064" y2="-130.048" width="0.1524" layer="91"/>
 <label x="-4.064" y="-129.54" size="1.778" layer="95" rot="R90"/>
 </segment>
+<segment>
+<pinref part="M0_VHALL" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="-144.78" x2="33.02" y2="-144.78" width="0.1524" layer="91"/>
+<label x="33.02" y="-144.78" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="M0_ENC_A" class="0">
 <segment>
@@ -3454,10 +3612,10 @@ between resistor/cap)</text>
 <label x="7.62" y="-60.96" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 <segment>
+<pinref part="R19" gate="B" pin="1"/>
 <pinref part="SENSORS_M345" gate="G$1" pin="17"/>
 <wire x1="35.56" y1="-43.18" x2="50.8" y2="-43.18" width="0.1524" layer="91"/>
 <label x="45.72" y="-43.18" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="R19" gate="A" pin="1"/>
 <wire x1="50.8" y1="-40.64" x2="50.8" y2="-43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -3468,10 +3626,10 @@ between resistor/cap)</text>
 <label x="7.62" y="-63.5" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 <segment>
+<pinref part="R19" gate="A" pin="1"/>
 <pinref part="SENSORS_M345" gate="G$1" pin="18"/>
-<wire x1="35.56" y1="-45.72" x2="50.8" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="-45.72" x2="35.56" y2="-45.72" width="0.1524" layer="91"/>
 <label x="45.72" y="-45.72" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="R19" gate="B" pin="1"/>
 </segment>
 </net>
 <net name="M5_HALL3" class="0">
@@ -3492,18 +3650,18 @@ between resistor/cap)</text>
 <segment>
 <pinref part="SENSORS_M345" gate="G$1" pin="21"/>
 <label x="45.72" y="-53.34" size="1.778" layer="95" align="bottom-right"/>
-<pinref part="R19" gate="A" pin="2"/>
-<wire x1="60.96" y1="-40.64" x2="63.5" y2="-40.64" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="-40.64" x2="63.5" y2="-45.72" width="0.1524" layer="91"/>
 <pinref part="R19" gate="C" pin="2"/>
+<wire x1="63.5" y1="-40.64" x2="63.5" y2="-45.72" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="-45.72" x2="63.5" y2="-50.8" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="-50.8" x2="60.96" y2="-50.8" width="0.1524" layer="91"/>
-<pinref part="R19" gate="B" pin="2"/>
-<wire x1="60.96" y1="-45.72" x2="63.5" y2="-45.72" width="0.1524" layer="91"/>
-<junction x="63.5" y="-45.72"/>
 <wire x1="63.5" y1="-50.8" x2="63.5" y2="-53.34" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="-53.34" x2="35.56" y2="-53.34" width="0.1524" layer="91"/>
 <junction x="63.5" y="-50.8"/>
+<pinref part="R19" gate="B" pin="2"/>
+<wire x1="60.96" y1="-40.64" x2="63.5" y2="-40.64" width="0.1524" layer="91"/>
+<pinref part="R19" gate="A" pin="2"/>
+<wire x1="60.96" y1="-45.72" x2="63.5" y2="-45.72" width="0.1524" layer="91"/>
+<junction x="63.5" y="-45.72"/>
 </segment>
 <segment>
 <pinref part="R12" gate="G$1" pin="1"/>
@@ -3671,6 +3829,11 @@ between resistor/cap)</text>
 <wire x1="-132.08" y1="-134.62" x2="-132.08" y2="-132.08" width="0.1524" layer="91"/>
 <label x="-132.08" y="-131.826" size="1.778" layer="95" rot="R90"/>
 </segment>
+<segment>
+<pinref part="M0_VHALL_IN" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="-137.16" x2="33.02" y2="-137.16" width="0.1524" layer="91"/>
+<label x="33.02" y="-137.16" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="M1_VHALL_IN" class="0">
 <segment>
@@ -3767,6 +3930,11 @@ between resistor/cap)</text>
 <pinref part="R13" gate="G$1" pin="2"/>
 <wire x1="-27.94" y1="-132.08" x2="-27.94" y2="-129.54" width="0.1524" layer="91"/>
 <label x="-27.94" y="-129.286" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="3.3V_IN" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="-121.92" x2="33.02" y2="-121.92" width="0.1524" layer="91"/>
+<label x="33.02" y="-121.92" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
