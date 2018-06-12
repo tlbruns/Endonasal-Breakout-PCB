@@ -1374,7 +1374,7 @@ Trevor Bruns- May 2018</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="CONN_RECT_2X10">
+<deviceset name="CONN_RECT_2X10" prefix="J">
 <gates>
 <gate name="G$1" symbol="M20" x="0" y="0"/>
 </gates>
@@ -1408,7 +1408,7 @@ Trevor Bruns- May 2018</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_RECT_2X12">
+<deviceset name="CONN_RECT_2X12" prefix="J">
 <gates>
 <gate name="G$1" symbol="M24" x="0" y="0"/>
 </gates>
@@ -1446,7 +1446,7 @@ Trevor Bruns- May 2018</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_RECT_2X20">
+<deviceset name="CONN_RECT_2X20" prefix="J">
 <gates>
 <gate name="G$1" symbol="M40" x="0" y="0"/>
 </gates>
@@ -1500,7 +1500,7 @@ Trevor Bruns- May 2018</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_RECT_2X32">
+<deviceset name="CONN_RECT_2X32" prefix="J">
 <gates>
 <gate name="G$1" symbol="M64" x="-2.54" y="2.54"/>
 </gates>
@@ -1649,7 +1649,7 @@ Trevor Bruns- May 2018</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="JACK_8P8C_RJ45_ETHERNET">
+<deviceset name="JACK_8P8C_RJ45_ETHERNET" prefix="J">
 <gates>
 <gate name="G$1" symbol="JACK_8P8C_RJ45_ETHERNET" x="2.54" y="2.54"/>
 </gates>
@@ -1672,7 +1672,7 @@ Trevor Bruns- May 2018</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="OR">
+<deviceset name="OR" prefix="U">
 <gates>
 <gate name="G$1" symbol="OR" x="0" y="0"/>
 <gate name="G$2" symbol="PWR" x="-25.4" y="0"/>
@@ -1736,7 +1736,7 @@ Trevor Bruns- May 2018</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CAP0805">
+<deviceset name="CAP0805" prefix="C">
 <gates>
 <gate name="G$1" symbol="CAP" x="0" y="-1.27"/>
 </gates>
@@ -2329,16 +2329,16 @@ Source: RS Component / Phycomp</description>
 <part name="R17" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV"/>
 <part name="R18" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV"/>
 <part name="R19" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV"/>
-<part name="TP1" library="Cannula_1_0" deviceset="TEST-POINT" device="3X5"/>
-<part name="TP2" library="Cannula_1_0" deviceset="TEST-POINT" device="3X5"/>
-<part name="TP3" library="Cannula_1_0" deviceset="TEST-POINT" device="3X5"/>
-<part name="TP4" library="Cannula_1_0" deviceset="TEST-POINT" device="3X5"/>
-<part name="3.3V_IN" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
-<part name="3.3V_IN_GND" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
-<part name="3.3V" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
-<part name="M0_VHALL_IN" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
-<part name="M0_VHALL" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
-<part name="M0_VHALL_GND" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
+<part name="TPG1" library="Cannula_1_0" deviceset="TEST-POINT" device="3X5"/>
+<part name="TPG2" library="Cannula_1_0" deviceset="TEST-POINT" device="3X5"/>
+<part name="TPG3" library="Cannula_1_0" deviceset="TEST-POINT" device="3X5"/>
+<part name="TPG4" library="Cannula_1_0" deviceset="TEST-POINT" device="3X5"/>
+<part name="TP3.3VIN" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
+<part name="TPG5" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
+<part name="TP3.3V" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
+<part name="TPHALLIN" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
+<part name="TPHALL" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
+<part name="TPG6" library="Cannula_1_0" deviceset="TEST-POINT" device="_5021"/>
 </parts>
 <sheets>
 <sheet>
@@ -2482,16 +2482,16 @@ between resistor/cap)</text>
 <instance part="R19" gate="B" x="55.88" y="-40.64"/>
 <instance part="R19" gate="C" x="55.88" y="-50.8"/>
 <instance part="R19" gate="D" x="111.76" y="81.28" rot="R90"/>
-<instance part="TP1" gate="G$1" x="30.48" y="-109.22" smashed="yes" rot="R180"/>
-<instance part="TP2" gate="G$1" x="30.48" y="-111.76" smashed="yes" rot="R180"/>
-<instance part="TP3" gate="G$1" x="30.48" y="-114.3" smashed="yes" rot="R180"/>
-<instance part="TP4" gate="G$1" x="30.48" y="-116.84" smashed="yes" rot="R180"/>
-<instance part="3.3V_IN" gate="G$1" x="30.48" y="-121.92" smashed="yes" rot="R180"/>
-<instance part="3.3V_IN_GND" gate="G$1" x="30.48" y="-124.46" smashed="yes" rot="R180"/>
-<instance part="3.3V" gate="G$1" x="30.48" y="-127" smashed="yes" rot="R180"/>
-<instance part="M0_VHALL_IN" gate="G$1" x="30.48" y="-132.08" smashed="yes" rot="R180"/>
-<instance part="M0_VHALL" gate="G$1" x="30.48" y="-137.16" smashed="yes" rot="R180"/>
-<instance part="M0_VHALL_GND" gate="G$1" x="30.48" y="-134.62" smashed="yes" rot="R180"/>
+<instance part="TPG1" gate="G$1" x="30.48" y="-109.22" smashed="yes" rot="R180"/>
+<instance part="TPG2" gate="G$1" x="30.48" y="-111.76" smashed="yes" rot="R180"/>
+<instance part="TPG3" gate="G$1" x="30.48" y="-114.3" smashed="yes" rot="R180"/>
+<instance part="TPG4" gate="G$1" x="30.48" y="-116.84" smashed="yes" rot="R180"/>
+<instance part="TP3.3VIN" gate="G$1" x="30.48" y="-121.92" smashed="yes" rot="R180"/>
+<instance part="TPG5" gate="G$1" x="30.48" y="-124.46" smashed="yes" rot="R180"/>
+<instance part="TP3.3V" gate="G$1" x="30.48" y="-127" smashed="yes" rot="R180"/>
+<instance part="TPHALLIN" gate="G$1" x="30.48" y="-132.08" smashed="yes" rot="R180"/>
+<instance part="TPHALL" gate="G$1" x="30.48" y="-137.16" smashed="yes" rot="R180"/>
+<instance part="TPG6" gate="G$1" x="30.48" y="-134.62" smashed="yes" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -2651,32 +2651,32 @@ between resistor/cap)</text>
 <wire x1="-27.94" y1="-154.94" x2="-27.94" y2="-157.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="TP1" gate="G$1" pin="1"/>
+<pinref part="TPG1" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="-109.22" x2="33.02" y2="-109.22" width="0.1524" layer="91"/>
 <label x="33.02" y="-109.22" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="TP2" gate="G$1" pin="1"/>
+<pinref part="TPG2" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="-111.76" x2="33.02" y2="-111.76" width="0.1524" layer="91"/>
 <label x="33.02" y="-111.76" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="TP3" gate="G$1" pin="1"/>
+<pinref part="TPG3" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="-114.3" x2="33.02" y2="-114.3" width="0.1524" layer="91"/>
 <label x="33.02" y="-114.3" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="TP4" gate="G$1" pin="1"/>
+<pinref part="TPG4" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="-116.84" x2="33.02" y2="-116.84" width="0.1524" layer="91"/>
 <label x="33.02" y="-116.84" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="3.3V_IN_GND" gate="G$1" pin="1"/>
+<pinref part="TPG5" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="-124.46" x2="33.02" y2="-124.46" width="0.1524" layer="91"/>
 <label x="33.02" y="-124.46" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="M0_VHALL_GND" gate="G$1" pin="1"/>
+<pinref part="TPG6" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="-134.62" x2="33.02" y2="-134.62" width="0.1524" layer="91"/>
 <label x="33.02" y="-134.62" size="1.778" layer="95"/>
 </segment>
@@ -2740,7 +2740,7 @@ between resistor/cap)</text>
 <junction x="-27.94" y="-144.78"/>
 </segment>
 <segment>
-<pinref part="3.3V" gate="G$1" pin="1"/>
+<pinref part="TP3.3V" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="-127" x2="33.02" y2="-127" width="0.1524" layer="91"/>
 <label x="33.02" y="-127" size="1.778" layer="95"/>
 </segment>
@@ -3215,7 +3215,7 @@ between resistor/cap)</text>
 <label x="-4.064" y="-129.54" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="M0_VHALL" gate="G$1" pin="1"/>
+<pinref part="TPHALL" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="-137.16" x2="33.02" y2="-137.16" width="0.1524" layer="91"/>
 <label x="33.02" y="-137.16" size="1.778" layer="95"/>
 </segment>
@@ -3821,7 +3821,7 @@ between resistor/cap)</text>
 <label x="-132.08" y="-131.826" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="M0_VHALL_IN" gate="G$1" pin="1"/>
+<pinref part="TPHALLIN" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="-132.08" x2="33.02" y2="-132.08" width="0.1524" layer="91"/>
 <label x="33.02" y="-132.08" size="1.778" layer="95"/>
 </segment>
@@ -3923,7 +3923,7 @@ between resistor/cap)</text>
 <label x="-27.94" y="-129.286" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="3.3V_IN" gate="G$1" pin="1"/>
+<pinref part="TP3.3VIN" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="-121.92" x2="33.02" y2="-121.92" width="0.1524" layer="91"/>
 <label x="33.02" y="-121.92" size="1.778" layer="95"/>
 </segment>

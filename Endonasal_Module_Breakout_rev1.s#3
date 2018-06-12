@@ -2301,7 +2301,7 @@ Source: RS Component / Phycomp</description>
 <part name="U2" library="Cannula_1_0" deviceset="OR" device="" value="OR_M3"/>
 <part name="GND9" library="Cannula_1_0" deviceset="GND2" device=""/>
 <part name="GND10" library="Cannula_1_0" deviceset="GND2" device=""/>
-<part name="D1" library="Cannula_1_0" deviceset="LED" device="-0805"/>
+<part name="D1" library="Cannula_1_0" deviceset="LED" device="-0805" value="LEDG"/>
 <part name="R7" library="Cannula_1_0" deviceset="RESISTOR" device="-0603" value="220"/>
 <part name="GND1" library="Cannula_1_0" deviceset="GND2" device=""/>
 <part name="R1" library="Cannula_1_0" deviceset="RESISTOR" device="-0603" value="1"/>
@@ -2327,12 +2327,12 @@ Source: RS Component / Phycomp</description>
 <part name="C7" library="Cannula_1_0" deviceset="CAP0805" device="" value="10uF"/>
 <part name="C8" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
 <part name="C9" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="0.1uF"/>
-<part name="R14" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV"/>
-<part name="R13" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV"/>
-<part name="R12" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV"/>
-<part name="R11" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV"/>
-<part name="R10" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV"/>
-<part name="R9" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV"/>
+<part name="R14" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV" value="10K"/>
+<part name="R13" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV" value="10K"/>
+<part name="R12" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV" value="10K"/>
+<part name="R11" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV" value="10K"/>
+<part name="R10" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV" value="10K"/>
+<part name="R9" library="SparkFun-Passives" deviceset="RESISTOR-ARRAY" device="0603-ARV" value="10K"/>
 <part name="TP10" library="Cannula_1_0" deviceset="TEST-POINT" device="3X5"/>
 <part name="TP9" library="Cannula_1_0" deviceset="TEST-POINT" device="3X5"/>
 <part name="TP8" library="Cannula_1_0" deviceset="TEST-POINT" device="3X5"/>
@@ -2462,29 +2462,83 @@ between resistor/cap)</text>
 </instance>
 <instance part="C8" gate="G$1" x="-109.22" y="-78.74"/>
 <instance part="C9" gate="G$1" x="-50.8" y="-78.74"/>
-<instance part="R14" gate="A" x="55.88" y="58.42" rot="R180"/>
-<instance part="R14" gate="B" x="55.88" y="63.5" rot="R180"/>
-<instance part="R14" gate="C" x="55.88" y="68.58" rot="R180"/>
+<instance part="R14" gate="A" x="55.88" y="58.42" smashed="yes" rot="R180">
+<attribute name="NAME" x="51.308" y="60.4266" size="1.778" layer="95"/>
+<attribute name="VALUE" x="57.912" y="60.706" size="1.778" layer="96"/>
+</instance>
+<instance part="R14" gate="B" x="55.88" y="63.5" smashed="yes" rot="R180">
+<attribute name="NAME" x="51.308" y="65.5066" size="1.778" layer="95"/>
+<attribute name="VALUE" x="57.912" y="65.532" size="1.778" layer="96"/>
+</instance>
+<instance part="R14" gate="C" x="55.88" y="68.58" smashed="yes" rot="R180">
+<attribute name="NAME" x="50.8" y="71.0946" size="1.778" layer="95"/>
+<attribute name="VALUE" x="57.912" y="70.866" size="1.778" layer="96"/>
+</instance>
 <instance part="R14" gate="D" x="83.82" y="81.28" rot="R270"/>
-<instance part="R13" gate="A" x="55.88" y="38.1"/>
-<instance part="R13" gate="B" x="55.88" y="43.18"/>
-<instance part="R13" gate="C" x="55.88" y="48.26"/>
+<instance part="R13" gate="A" x="55.88" y="38.1" smashed="yes">
+<attribute name="NAME" x="50.8" y="40.3606" size="1.778" layer="95"/>
+<attribute name="VALUE" x="58.42" y="40.132" size="1.778" layer="96"/>
+</instance>
+<instance part="R13" gate="B" x="55.88" y="43.18" smashed="yes">
+<attribute name="NAME" x="51.054" y="45.1866" size="1.778" layer="95"/>
+<attribute name="VALUE" x="57.912" y="45.466" size="1.778" layer="96"/>
+</instance>
+<instance part="R13" gate="C" x="55.88" y="48.26" smashed="yes">
+<attribute name="NAME" x="50.8" y="50.5206" size="1.778" layer="95"/>
+<attribute name="VALUE" x="58.166" y="50.546" size="1.778" layer="96"/>
+</instance>
 <instance part="R13" gate="D" x="88.9" y="81.28" rot="R270"/>
-<instance part="R12" gate="A" x="55.88" y="17.78"/>
-<instance part="R12" gate="B" x="55.88" y="27.94"/>
-<instance part="R12" gate="C" x="55.88" y="22.86"/>
+<instance part="R12" gate="A" x="55.88" y="17.78" smashed="yes">
+<attribute name="NAME" x="51.308" y="19.5326" size="1.778" layer="95"/>
+<attribute name="VALUE" x="58.42" y="20.066" size="1.778" layer="96"/>
+</instance>
+<instance part="R12" gate="B" x="55.88" y="27.94" smashed="yes">
+<attribute name="NAME" x="51.054" y="30.2006" size="1.778" layer="95"/>
+<attribute name="VALUE" x="58.674" y="30.226" size="1.778" layer="96"/>
+</instance>
+<instance part="R12" gate="C" x="55.88" y="22.86" smashed="yes">
+<attribute name="NAME" x="51.054" y="25.1206" size="1.778" layer="95"/>
+<attribute name="VALUE" x="58.42" y="25.146" size="1.778" layer="96"/>
+</instance>
 <instance part="R12" gate="D" x="96.52" y="81.28" rot="R90"/>
-<instance part="R11" gate="A" x="55.88" y="0"/>
-<instance part="R11" gate="B" x="55.88" y="-5.08"/>
-<instance part="R11" gate="C" x="55.88" y="-10.16"/>
+<instance part="R11" gate="A" x="55.88" y="0" smashed="yes">
+<attribute name="NAME" x="51.562" y="2.0066" size="1.778" layer="95"/>
+<attribute name="VALUE" x="58.674" y="2.54" size="1.778" layer="96"/>
+</instance>
+<instance part="R11" gate="B" x="55.88" y="-5.08" smashed="yes">
+<attribute name="NAME" x="51.308" y="-3.3274" size="1.778" layer="95"/>
+<attribute name="VALUE" x="58.166" y="-3.048" size="1.778" layer="96"/>
+</instance>
+<instance part="R11" gate="C" x="55.88" y="-10.16" smashed="yes">
+<attribute name="NAME" x="51.054" y="-8.4074" size="1.778" layer="95"/>
+<attribute name="VALUE" x="57.912" y="-7.874" size="1.778" layer="96"/>
+</instance>
 <instance part="R11" gate="D" x="101.6" y="81.28" rot="R90"/>
-<instance part="R10" gate="A" x="55.88" y="-20.32"/>
-<instance part="R10" gate="B" x="55.88" y="-25.4"/>
-<instance part="R10" gate="C" x="55.88" y="-30.48"/>
+<instance part="R10" gate="A" x="55.88" y="-20.32" smashed="yes">
+<attribute name="NAME" x="50.546" y="-18.3134" size="1.778" layer="95"/>
+<attribute name="VALUE" x="57.912" y="-23.368" size="1.778" layer="96"/>
+</instance>
+<instance part="R10" gate="B" x="55.88" y="-25.4" smashed="yes">
+<attribute name="NAME" x="50.8" y="-23.6474" size="1.778" layer="95"/>
+<attribute name="VALUE" x="58.166" y="-18.288" size="1.778" layer="96"/>
+</instance>
+<instance part="R10" gate="C" x="55.88" y="-30.48" smashed="yes">
+<attribute name="NAME" x="50.8" y="-28.7274" size="1.778" layer="95"/>
+<attribute name="VALUE" x="57.912" y="-28.702" size="1.778" layer="96"/>
+</instance>
 <instance part="R10" gate="D" x="106.68" y="81.28" rot="R90"/>
-<instance part="R9" gate="A" x="55.88" y="-45.72"/>
-<instance part="R9" gate="B" x="55.88" y="-40.64"/>
-<instance part="R9" gate="C" x="55.88" y="-50.8"/>
+<instance part="R9" gate="A" x="55.88" y="-45.72" smashed="yes">
+<attribute name="NAME" x="51.308" y="-43.9674" size="1.778" layer="95"/>
+<attribute name="VALUE" x="57.912" y="-43.434" size="1.778" layer="96"/>
+</instance>
+<instance part="R9" gate="B" x="55.88" y="-40.64" smashed="yes">
+<attribute name="NAME" x="51.562" y="-38.6334" size="1.778" layer="95"/>
+<attribute name="VALUE" x="57.658" y="-38.354" size="1.778" layer="96"/>
+</instance>
+<instance part="R9" gate="C" x="55.88" y="-50.8" smashed="yes">
+<attribute name="NAME" x="51.816" y="-48.7934" size="1.778" layer="95"/>
+<attribute name="VALUE" x="57.658" y="-49.022" size="1.778" layer="96"/>
+</instance>
 <instance part="R9" gate="D" x="111.76" y="81.28" rot="R90"/>
 <instance part="TP10" gate="G$1" x="30.48" y="-109.22" smashed="yes" rot="R180"/>
 <instance part="TP9" gate="G$1" x="30.48" y="-111.76" smashed="yes" rot="R180"/>
@@ -2749,7 +2803,7 @@ between resistor/cap)</text>
 <label x="33.02" y="-127" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="M0C" class="1">
+<net name="M0C" class="2">
 <segment>
 <pinref part="J7" gate="G$1" pin="1"/>
 <wire x1="-88.9" y1="63.5" x2="-83.312" y2="63.5" width="0.1524" layer="91"/>
@@ -2771,7 +2825,7 @@ between resistor/cap)</text>
 <label x="-43.18" y="60.96" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M0B" class="1">
+<net name="M0B" class="2">
 <segment>
 <pinref part="J7" gate="G$1" pin="3"/>
 <wire x1="-88.9" y1="58.42" x2="-83.312" y2="58.42" width="0.1524" layer="91"/>
@@ -2793,7 +2847,7 @@ between resistor/cap)</text>
 <label x="-43.18" y="55.88" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M0A" class="1">
+<net name="M0A" class="2">
 <segment>
 <pinref part="J7" gate="G$1" pin="5"/>
 <wire x1="-88.9" y1="53.34" x2="-83.312" y2="53.34" width="0.1524" layer="91"/>
@@ -2815,7 +2869,7 @@ between resistor/cap)</text>
 <label x="-43.18" y="50.8" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M1C" class="1">
+<net name="M1C" class="2">
 <segment>
 <pinref part="J7" gate="G$1" pin="8"/>
 <wire x1="-88.9" y1="45.72" x2="-83.312" y2="45.72" width="0.1524" layer="91"/>
@@ -2837,7 +2891,7 @@ between resistor/cap)</text>
 <label x="-43.18" y="43.18" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M1B" class="1">
+<net name="M1B" class="2">
 <segment>
 <pinref part="J7" gate="G$1" pin="10"/>
 <wire x1="-88.9" y1="40.64" x2="-83.312" y2="40.64" width="0.1524" layer="91"/>
@@ -2859,7 +2913,7 @@ between resistor/cap)</text>
 <label x="-43.18" y="38.1" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M1A" class="1">
+<net name="M1A" class="2">
 <segment>
 <pinref part="J7" gate="G$1" pin="12"/>
 <wire x1="-88.9" y1="35.56" x2="-83.312" y2="35.56" width="0.1524" layer="91"/>
@@ -2881,7 +2935,7 @@ between resistor/cap)</text>
 <label x="-43.18" y="33.02" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M2C" class="1">
+<net name="M2C" class="2">
 <segment>
 <pinref part="J7" gate="G$1" pin="15"/>
 <wire x1="-88.9" y1="27.94" x2="-83.312" y2="27.94" width="0.1524" layer="91"/>
@@ -2903,7 +2957,7 @@ between resistor/cap)</text>
 <label x="-43.18" y="25.4" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M2B" class="1">
+<net name="M2B" class="2">
 <segment>
 <pinref part="J7" gate="G$1" pin="17"/>
 <wire x1="-88.9" y1="22.86" x2="-83.312" y2="22.86" width="0.1524" layer="91"/>
@@ -2925,7 +2979,7 @@ between resistor/cap)</text>
 <label x="-43.18" y="20.32" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M2A" class="1">
+<net name="M2A" class="2">
 <segment>
 <pinref part="J7" gate="G$1" pin="19"/>
 <wire x1="-88.9" y1="17.78" x2="-83.312" y2="17.78" width="0.1524" layer="91"/>
@@ -2947,7 +3001,7 @@ between resistor/cap)</text>
 <label x="-43.18" y="15.24" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M4C" class="1">
+<net name="M4C" class="2">
 <segment>
 <pinref part="J3" gate="G$1" pin="8"/>
 <wire x1="-88.9" y1="-15.24" x2="-83.312" y2="-15.24" width="0.1524" layer="91"/>
@@ -2969,7 +3023,7 @@ between resistor/cap)</text>
 <label x="-43.18" y="-7.62" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M4B" class="1">
+<net name="M4B" class="2">
 <segment>
 <pinref part="J3" gate="G$1" pin="10"/>
 <wire x1="-88.9" y1="-20.32" x2="-83.312" y2="-20.32" width="0.1524" layer="91"/>
@@ -2991,7 +3045,7 @@ between resistor/cap)</text>
 <label x="-43.18" y="-12.7" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M4A" class="1">
+<net name="M4A" class="2">
 <segment>
 <pinref part="J3" gate="G$1" pin="12"/>
 <wire x1="-88.9" y1="-25.4" x2="-83.312" y2="-25.4" width="0.1524" layer="91"/>
@@ -3013,7 +3067,7 @@ between resistor/cap)</text>
 <label x="-43.18" y="-17.78" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M5C" class="1">
+<net name="M5C" class="2">
 <segment>
 <pinref part="J3" gate="G$1" pin="15"/>
 <wire x1="-88.9" y1="-33.02" x2="-83.312" y2="-33.02" width="0.1524" layer="91"/>
@@ -3035,7 +3089,7 @@ between resistor/cap)</text>
 <label x="-43.18" y="-25.4" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M5B" class="1">
+<net name="M5B" class="2">
 <segment>
 <pinref part="J3" gate="G$1" pin="17"/>
 <wire x1="-88.9" y1="-38.1" x2="-83.312" y2="-38.1" width="0.1524" layer="91"/>
@@ -3057,7 +3111,7 @@ between resistor/cap)</text>
 <label x="-43.18" y="-30.48" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M5A" class="1">
+<net name="M5A" class="2">
 <segment>
 <pinref part="J3" gate="G$1" pin="19"/>
 <wire x1="-88.9" y1="-43.18" x2="-83.312" y2="-43.18" width="0.1524" layer="91"/>
@@ -3079,7 +3133,7 @@ between resistor/cap)</text>
 <label x="-43.18" y="-35.56" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M3C" class="1">
+<net name="M3C" class="2">
 <segment>
 <pinref part="J5" gate="G$1" pin="21"/>
 <wire x1="-53.34" y1="12.7" x2="-47.752" y2="12.7" width="0.1524" layer="91"/>
@@ -3101,7 +3155,7 @@ between resistor/cap)</text>
 <label x="-78.74" y="0" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M3B" class="1">
+<net name="M3B" class="2">
 <segment>
 <pinref part="J5" gate="G$1" pin="23"/>
 <wire x1="-53.34" y1="7.62" x2="-47.752" y2="7.62" width="0.1524" layer="91"/>
@@ -3123,7 +3177,7 @@ between resistor/cap)</text>
 <label x="-78.74" y="-5.08" size="1.778" layer="95" align="bottom-right"/>
 </segment>
 </net>
-<net name="M3A" class="1">
+<net name="M3A" class="2">
 <segment>
 <pinref part="J5" gate="G$1" pin="25"/>
 <wire x1="-53.34" y1="2.54" x2="-47.752" y2="2.54" width="0.1524" layer="91"/>
@@ -3211,7 +3265,11 @@ between resistor/cap)</text>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="-132.08" y1="-144.78" x2="-132.08" y2="-147.32" width="0.1524" layer="91"/>
+<wire x1="-132.08" y1="-144.78" x2="-132.08" y2="-146.05" width="0.1524" layer="91"/>
+<wire x1="-132.08" y1="-146.05" x2="-132.08" y2="-147.32" width="0.1524" layer="91"/>
+<wire x1="-132.08" y1="-146.05" x2="-134.62" y2="-146.05" width="0.1524" layer="91"/>
+<junction x="-132.08" y="-146.05"/>
+<label x="-146.558" y="-145.796" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
@@ -3936,6 +3994,20 @@ between resistor/cap)</text>
 </sheet>
 </sheets>
 <errors>
+<approved hash="101,1,83.82,86.36,R14D,1,,,,"/>
+<approved hash="101,1,83.82,76.2,R14D,2,,,,"/>
+<approved hash="101,1,88.9,86.36,R13D,1,,,,"/>
+<approved hash="101,1,88.9,76.2,R13D,2,,,,"/>
+<approved hash="101,1,96.52,76.2,R12D,1,,,,"/>
+<approved hash="101,1,96.52,86.36,R12D,2,,,,"/>
+<approved hash="101,1,101.6,76.2,R11D,1,,,,"/>
+<approved hash="101,1,101.6,86.36,R11D,2,,,,"/>
+<approved hash="101,1,106.68,76.2,R10D,1,,,,"/>
+<approved hash="101,1,106.68,86.36,R10D,2,,,,"/>
+<approved hash="101,1,111.76,76.2,R9D,1,,,,"/>
+<approved hash="101,1,111.76,86.36,R9D,2,,,,"/>
+<approved hash="104,1,-114.3,-68.58,U1G$2,VCC,3.3V,,,"/>
+<approved hash="104,1,-55.88,-68.58,U2G$2,VCC,3.3V,,,"/>
 <approved hash="106,1,-7.62,20.32,M1_LIMIT,,,,,"/>
 <approved hash="106,1,-7.62,-5.08,M2_LIMIT,,,,,"/>
 <approved hash="106,1,-7.62,-55.88,M4_LIMIT,,,,,"/>
@@ -3943,6 +4015,10 @@ between resistor/cap)</text>
 <approved hash="106,1,-7.62,-88.9,N$190,,,,,"/>
 <approved hash="106,1,-7.62,-91.44,N$191,,,,,"/>
 <approved hash="106,1,-7.62,-93.98,N$192,,,,,"/>
+<approved hash="115,1,-93.98,-146.05,M3_VHALL,,,,,"/>
+<approved hash="115,1,-106.68,-146.05,M2_VHALL,,,,,"/>
+<approved hash="115,1,-81.28,-146.05,M4_VHALL,,,,,"/>
+<approved hash="115,1,-119.38,-146.05,M1_VHALL,,,,,"/>
 </errors>
 </schematic>
 </drawing>
